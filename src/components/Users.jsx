@@ -1,14 +1,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 const Users = () => {
-    
-        const navigate =useNavigate();
+     const navigate =useNavigate();
         const submithandler=(e)=>{
-            e.preventDefult();
-            console.log(e.message);
+            e.preventDefault();
+         console.log("form submited")
+            navigate("/");
+            navigate(-1);
         }
         return (
-       <h1>users</h1>
+       <div>
+        <h1 className="text-2xl text-blue-300">Users</h1>
+        <form onSubmit={submithandler} className="p-5">
+            <input type="text" placeholder="enter name" />
+            <input type="text" placeholder="enter email" />
+            <input type="submit" value="submit" />
+        </form>
+       </div>
         );
 };
 
