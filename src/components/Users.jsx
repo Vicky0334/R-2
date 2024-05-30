@@ -12,8 +12,6 @@ const Users = () => {
        <div>
         <h1 className="text-2xl text-blue-300">Users</h1>
         <form onSubmit={submithandler} className="p-5">
-            <input type="text" placeholder="enter name" />
-            <input type="text" placeholder="enter email" />
             <input type="submit" value="submit" />
         </form>
        </div>
